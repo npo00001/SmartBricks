@@ -1,0 +1,402 @@
+
+   --- Expanded Deck Component Count ---
+A's 4
+B's 36
+C's 96
+D's 34
+E's 8
+F's 2
+G's 4
+I's 6
+L's 2
+R's 27
+S's 30
+V's 5
+tot: 254
+
+
+    --- Expanded Netlist ---
+* C:\Users\zacha\Desktop\MyFiles\Research Project\LTSpice\AutoRanging\AutoRanging.asc
+c:u1:12x n005 n008 0.45e-014
+c:u1:13x n005 n011 0.45e-014
+c:u1:14x n005 n012 0.45e-014
+c:u1:15x n005 n001 0.45e-014
+c:u1:16x n005 n006 0.45e-014
+c:u1:17x n005 n007 0.45e-014
+c:u1:18x n005 n009 0.45e-014
+c:u1:23x n008 n011 0.45e-014
+c:u1:24x n008 n012 0.45e-014
+c:u1:25x n008 n001 0.45e-014
+c:u1:26x n008 n006 0.45e-014
+c:u1:27x n008 n007 0.45e-014
+c:u1:28x n008 n009 0.45e-014
+c:u1:34x n011 n012 0.45e-014
+c:u1:35x n011 n001 0.45e-014
+c:u1:36x n011 n006 0.45e-014
+c:u1:37x n011 n007 0.45e-014
+c:u1:38x n011 n009 0.45e-014
+c:u1:45x n012 n001 0.45e-014
+c:u1:46x n012 n006 0.45e-014
+c:u1:47x n012 n007 0.45e-014
+c:u1:48x n012 n009 0.45e-014
+c:u1:56x n001 n006 0.45e-014
+c:u1:57x n001 n007 0.45e-014
+c:u1:58x n001 n009 0.45e-014
+c:u1:67x n006 n007 0.45e-014
+c:u1:68x n006 n009 0.45e-014
+c:u1:78x n007 n009 0.45e-014
+i:u1:1 com 0 0.05e-006
+i:u1:2 0 0 0.01e-006
+d:u1:11 0 n002 u1:dclamp 
+d:u1:12 n002 com u1:dclamp 
+c:u1:15 n002 0 1e-015
+b:u1:§ech151 u1:a151 0 v=if((abs(v(u1:a1g)))>(abs(v(n002))),v(u1:a1g),v(n002)) 
+r:u1:151 u1:a151 0 1g
+s:u1:1a51 u1:5a1 u1:5b1 u1:15a 0 u1:von 
+b:u1:§ech251 u1:15a 0 v=if(v(u1:a151)<-3.5,5,0) 
+b:u1:§ech351 u1:5b1 0 v=if(v(u1:a151)<-3.5,0.5*(v(u1:a151)--3.5)+16,0) 
+s:u1:2a51 u1:5a1 u1:2b51 u1:152a 0 u1:von 
+b:u1:§ech451 u1:152a 0 v=if((v(u1:a151)>=-3.5)&(v(u1:a151)<=4.25),5,0) 
+b:u1:§ech551 u1:2b51 0 v=if((v(u1:a151)>=-3.5)&(v(u1:a151)<=4.25),((16-14.5)/((-3.5--0.985126551241241)*(-3.5--0.985126551241241)))*(v(u1:a151)--0.985126551241241)*(v(u1:a151)--0.985126551241241)+14.5,0) 
+s:u1:3a51 u1:5a1 u1:3b51 u1:153a 0 u1:von 
+b:u1:§ech651 u1:153a 0 v=if(v(u1:a151)>4.25,5,0) 
+b:u1:§ech751 u1:3b51 0 v=if(v(u1:a151)>4.25,-1.6*(v(u1:a151)-4.25)+21,0) 
+r:u1:in51 u1:5a1 0 1g
+f:u1:copy51 0 u1:154a v:u1:sense51 1
+r:u1:sensor51 u1:154a 0 1k
+b:u1:§eout51 u1:a551 u1:155a v=0.999/1000*v(u1:5a1,0)*v(u1:154a,0)
+r:u1:251 u1:a551 u1:r1p 0.001
+v:u1:sense51 u1:155a u1:a1g 0
+s:u1:513 u1:r1p n002 u1:51k 0 u1:von 
+s:u1:514 u1:51l u1:51k u1:51l 0 u1:von 
+b:u1:§ech515 u1:51l 0 v=if((v(0)<=-0.5&v(0)>=-5.5)&(v(com)<=5.5&v(com)>=4.5),5,0.01) 
+s:u1:515 u1:51m u1:51k u1:51m 0 u1:von 
+b:u1:§ech516 u1:51m 0 v=if((v(0)>=-0.5&(v(com)<=5.5&v(com)>=2.97)),5,0.01) 
+d:u1:113 0 n005 u1:dclamp 
+d:u1:114 n005 com u1:dclamp 
+c:u1:111 n005 n002 0.9e-014
+c:u1:112 n002 u1:11n 1.95e-012
+c:u1:113 n005 u1:11n 1.95e-012
+c:u1:114 n005 0 1e-015
+s:u1:111 n005 u1:a1g u1:11n 0 u1:von 
+s:u1:112 u1:11i u1:11j u1:11i 0 u1:ven 
+b:u1:§ech114 u1:11i 0 v=if(v(com)>=2.4&v(a1n)<2.4&v(a0n)<2.4,5,0.8) 
+e:u1:v11 u1:11n 0 u1:11j 0 1
+c:u1:116 u1:11j 0 8e-013
+d:u1:213 0 n008 u1:dclamp 
+d:u1:214 n008 com u1:dclamp 
+c:u1:211 n008 n002 0.9e-014
+c:u1:212 n002 u1:21n 1.95e-012
+c:u1:213 n008 u1:21n 1.95e-012
+c:u1:214 n008 0 1e-015
+s:u1:211 n008 u1:a1g u1:21n 0 u1:von 
+s:u1:212 u1:21i u1:21j u1:21i 0 u1:ven 
+b:u1:§ech214 u1:21i 0 v=if(v(com)>=2.4&v(a1n)>=2.4&v(a0n)<2.4,5,0.8) 
+e:u1:v21 u1:21n 0 u1:21j 0 1
+c:u1:216 u1:21j 0 8e-013
+d:u1:313 0 n011 u1:dclamp 
+d:u1:314 n011 com u1:dclamp 
+c:u1:311 n011 n002 0.9e-014
+c:u1:312 n002 u1:31n 1.95e-012
+c:u1:313 n011 u1:31n 1.95e-012
+c:u1:314 n011 0 1e-015
+s:u1:311 n011 u1:a1g u1:31n 0 u1:von 
+s:u1:312 u1:31i u1:31j u1:31i 0 u1:ven 
+b:u1:§ech314 u1:31i 0 v=if(v(com)>=2.4&v(a1n)<2.4&v(a0n)>=2.4,5,0.8) 
+e:u1:v31 u1:31n 0 u1:31j 0 1
+c:u1:316 u1:31j 0 8e-013
+d:u1:413 0 n012 u1:dclamp 
+d:u1:414 n012 com u1:dclamp 
+c:u1:411 n012 n002 0.9e-014
+c:u1:412 n002 u1:41n 1.95e-012
+c:u1:413 n012 u1:41n 1.95e-012
+c:u1:414 n012 0 1e-015
+s:u1:411 n012 u1:a1g u1:41n 0 u1:von 
+s:u1:412 u1:41i u1:41j u1:41i 0 u1:ven 
+b:u1:§ech414 u1:41i 0 v=if(v(com)>=2.4&v(a1n)>=2.4&v(a0n)>=2.4,5,0.8) 
+e:u1:v41 u1:41n 0 u1:41j 0 1
+c:u1:416 u1:41j 0 8e-013
+d:u1:21 0 r2select u1:dclamp 
+d:u1:22 r2select com u1:dclamp 
+c:u1:25 r2select 0 1e-015
+b:u1:§ech152 u1:a152 0 v=if((abs(v(u1:a2g)))>(abs(v(r2select))),v(u1:a2g),v(r2select)) 
+r:u1:152 u1:a152 0 1g
+s:u1:1a52 u1:5a2 u1:5b2 u1:25a 0 u1:von 
+b:u1:§ech252 u1:25a 0 v=if(v(u1:a152)<-3.5,5,0) 
+b:u1:§ech352 u1:5b2 0 v=if(v(u1:a152)<-3.5,0.5*(v(u1:a152)--3.5)+16,0) 
+s:u1:2a52 u1:5a2 u1:2b52 u1:252a 0 u1:von 
+b:u1:§ech452 u1:252a 0 v=if((v(u1:a152)>=-3.5)&(v(u1:a152)<=4.25),5,0) 
+b:u1:§ech552 u1:2b52 0 v=if((v(u1:a152)>=-3.5)&(v(u1:a152)<=4.25),((16-14.5)/((-3.5--0.985126551241241)*(-3.5--0.985126551241241)))*(v(u1:a152)--0.985126551241241)*(v(u1:a152)--0.985126551241241)+14.5,0) 
+s:u1:3a52 u1:5a2 u1:3b52 u1:253a 0 u1:von 
+b:u1:§ech652 u1:253a 0 v=if(v(u1:a152)>4.25,5,0) 
+b:u1:§ech752 u1:3b52 0 v=if(v(u1:a152)>4.25,-1.6*(v(u1:a152)-4.25)+21,0) 
+r:u1:in52 u1:5a2 0 1g
+f:u1:copy52 0 u1:254a v:u1:sense52 1
+r:u1:sensor52 u1:254a 0 1k
+b:u1:§eout52 u1:a552 u1:255a v=0.999/1000*v(u1:5a2,0)*v(u1:254a,0)
+r:u1:252 u1:a552 u1:r2p 0.001
+v:u1:sense52 u1:255a u1:a2g 0
+s:u1:523 u1:r2p r2select u1:52k 0 u1:von 
+s:u1:524 u1:52l u1:52k u1:52l 0 u1:von 
+b:u1:§ech525 u1:52l 0 v=if((v(0)<=-0.5&v(0)>=-5.5)&(v(com)<=5.5&v(com)>=4.5),5,0.01) 
+s:u1:525 u1:52m u1:52k u1:52m 0 u1:von 
+b:u1:§ech526 u1:52m 0 v=if((v(0)>=-0.5&(v(com)<=5.5&v(com)>=2.97)),5,0.01) 
+d:u1:123 0 n009 u1:dclamp 
+d:u1:124 n009 com u1:dclamp 
+c:u1:121 n009 r2select 0.9e-014
+c:u1:122 r2select u1:12n 1.95e-012
+c:u1:123 n009 u1:12n 1.95e-012
+c:u1:124 n009 0 1e-015
+s:u1:121 n009 u1:a2g u1:12n 0 u1:von 
+s:u1:122 u1:12i u1:12j u1:12i 0 u1:ven 
+b:u1:§ech124 u1:12i 0 v=if(v(com)>=2.4&v(a1n)<2.4&v(a0n)<2.4,5,0.8) 
+e:u1:v12 u1:12n 0 u1:12j 0 1
+c:u1:126 u1:12j 0 8e-013
+d:u1:223 0 n007 u1:dclamp 
+d:u1:224 n007 com u1:dclamp 
+c:u1:221 n007 r2select 0.9e-014
+c:u1:222 r2select u1:22n 1.95e-012
+c:u1:223 n007 u1:22n 1.95e-012
+c:u1:224 n007 0 1e-015
+s:u1:221 n007 u1:a2g u1:22n 0 u1:von 
+s:u1:222 u1:22i u1:22j u1:22i 0 u1:ven 
+b:u1:§ech224 u1:22i 0 v=if(v(com)>=2.4&v(a1n)>=2.4&v(a0n)<2.4,5,0.8) 
+e:u1:v22 u1:22n 0 u1:22j 0 1
+c:u1:226 u1:22j 0 8e-013
+d:u1:323 0 n006 u1:dclamp 
+d:u1:324 n006 com u1:dclamp 
+c:u1:321 n006 r2select 0.9e-014
+c:u1:322 r2select u1:32n 1.95e-012
+c:u1:323 n006 u1:32n 1.95e-012
+c:u1:324 n006 0 1e-015
+s:u1:321 n006 u1:a2g u1:32n 0 u1:von 
+s:u1:322 u1:32i u1:32j u1:32i 0 u1:ven 
+b:u1:§ech324 u1:32i 0 v=if(v(com)>=2.4&v(a1n)<2.4&v(a0n)>=2.4,5,0.8) 
+e:u1:v32 u1:32n 0 u1:32j 0 1
+c:u1:326 u1:32j 0 8e-013
+d:u1:423 0 n001 u1:dclamp 
+d:u1:424 n001 com u1:dclamp 
+c:u1:421 n001 r2select 0.9e-014
+c:u1:422 r2select u1:42n 1.95e-012
+c:u1:423 n001 u1:42n 1.95e-012
+c:u1:424 n001 0 1e-015
+s:u1:421 n001 u1:a2g u1:42n 0 u1:von 
+s:u1:422 u1:42i u1:42j u1:42i 0 u1:ven 
+b:u1:§ech424 u1:42i 0 v=if(v(com)>=2.4&v(a1n)>=2.4&v(a0n)>=2.4,5,0.8) 
+e:u1:v42 u1:42n 0 u1:42j 0 1
+c:u1:426 u1:42j 0 8e-013
+r1a com n003 3k
+r1b n002 com 3k
+rdc com n010 1k
+rdd n010 0 1k
+r2a n002 n009 3k
+rda com n013 1k
+rdb n013 0 1k
+r§pot n003 n004 0.1 
+vdd com 0 3.3
+ra n005 n004 300
+rb n008 n004 700
+rc n011 n004 1.2k
+rd n012 n004 1.7k
+c:u2:1 u2:n006 u2:x 1e-012 
+a:u2:1 u2:n005 0 u2:m u2:m u2:m u2:m u2:x u2:m ota g=1.2955822643008e-005 iout=4.12396643091325e-006 en=13n enk=20 vhigh=1e308 vlow=-1e308
+d:u2:21 u2:x com u2:esd 
+d:u2:22 0 u2:x u2:esd 
+d:u2:5 u2:n006 com u2:x1 
+d:u2:6 0 u2:n006 u2:x2 
+c:u2:2 com u2:n006 1p
+c:u2:3 u2:n006 0 1p
+g:u2:2 0 u2:m com 0 500µ
+r:u2:4 u2:m 0 1k noiseless
+g:u2:3 0 u2:m 0 0 500µ
+s:u2:1 u2:x u2:m 0 com u2:sd 
+a:u2:2 n003 n013 0 0 0 0 0 0 ota g=0 in=.8f ink=1 incm=.08f incmk=1
+i:u2:1 n013 0 2p load
+i:u2:2 n003 0 2p load
+c:u2:11 com n013 .7p rpar=40t noiseless
+c:u2:5 n013 0 .7p rpar=40t noiseless
+c:u2:10 n003 0 .7p rpar=40t noiseless
+c:u2:12 com n003 .7p rpar=40t noiseless
+b:u2:3 0 u2:n004 i=2m*dnlim(uplim(v(n013),v(com)-1,.1), v(0)+-.2, .1)+100n*v(n013)
+b:u2:4 u2:n004 0 i=2m*dnlim(uplim(v(n003),v(com)-1,.1), v(0)+-.2, .1)+100n*v(n003)
+c:u2:4 u2:n004 0 35p rpar=1k noiseless
+d:u2:1 com 0 u2:iq 
+l:u2:1 u2:n004 u2:n005 35µ
+c:u2:6 u2:n005 0 35p rpar=1k noiseless
+c:u2:7 com n004 1p
+c:u2:8 n004 0 1p
+r:u2:5 n003 n013 13.35t noiseless
+b:u2:1 com u2:n006 i=if(v(u2:m,u2:x)>=0,v(u2:m,u2:x)*(0.0161656666666667 + 0.808283333333333 *v(u2:m,u2:x)),0)
+b:u2:2 u2:n006 0 i=if(v(u2:x,u2:m)>0,v(u2:x,u2:m)*(0.0161656666666667 + 0.808283333333333 *v(u2:x,u2:m)),0)
+d:u2:2 u2:n006 u2:n007 u2:20ohm 
+d:u2:3 n004 u2:n007 u2:45ma 
+c:u2:9 com u2:n007 1p
+c:u2:13 u2:n007 0 1p
+c:u3:1 u3:n006 u3:x 1e-012 
+a:u3:1 u3:n005 0 u3:m u3:m u3:m u3:m u3:x u3:m ota g=1.2955822643008e-005 iout=4.12396643091325e-006 en=13n enk=20 vhigh=1e308 vlow=-1e308
+d:u3:21 u3:x com u3:esd 
+d:u3:22 0 u3:x u3:esd 
+d:u3:5 u3:n006 com u3:x1 
+d:u3:6 0 u3:n006 u3:x2 
+c:u3:2 com u3:n006 1p
+c:u3:3 u3:n006 0 1p
+g:u3:2 0 u3:m com 0 500µ
+r:u3:4 u3:m 0 1k noiseless
+g:u3:3 0 u3:m 0 0 500µ
+s:u3:1 u3:x u3:m 0 com u3:sd 
+a:u3:2 n002 n010 0 0 0 0 0 0 ota g=0 in=.8f ink=1 incm=.08f incmk=1
+i:u3:1 n010 0 2p load
+i:u3:2 n002 0 2p load
+c:u3:11 com n010 .7p rpar=40t noiseless
+c:u3:5 n010 0 .7p rpar=40t noiseless
+c:u3:10 n002 0 .7p rpar=40t noiseless
+c:u3:12 com n002 .7p rpar=40t noiseless
+b:u3:3 0 u3:n004 i=2m*dnlim(uplim(v(n010),v(com)-1,.1), v(0)+-.2, .1)+100n*v(n010)
+b:u3:4 u3:n004 0 i=2m*dnlim(uplim(v(n002),v(com)-1,.1), v(0)+-.2, .1)+100n*v(n002)
+c:u3:4 u3:n004 0 35p rpar=1k noiseless
+d:u3:1 com 0 u3:iq 
+l:u3:1 u3:n004 u3:n005 35µ
+c:u3:6 u3:n005 0 35p rpar=1k noiseless
+c:u3:7 com r2select 1p
+c:u3:8 r2select 0 1p
+r:u3:5 n002 n010 13.35t noiseless
+b:u3:1 com u3:n006 i=if(v(u3:m,u3:x)>=0,v(u3:m,u3:x)*(0.0161656666666667 + 0.808283333333333 *v(u3:m,u3:x)),0)
+b:u3:2 u3:n006 0 i=if(v(u3:x,u3:m)>0,v(u3:x,u3:m)*(0.0161656666666667 + 0.808283333333333 *v(u3:x,u3:m)),0)
+d:u3:2 u3:n006 u3:n007 u3:20ohm 
+d:u3:3 r2select u3:n007 u3:45ma 
+c:u3:9 com u3:n007 1p
+c:u3:13 u3:n007 0 1p
+r2b n002 n007 7k
+r2c n002 n006 12k
+r2d n002 n001 17k
+v§a1s a1n 0 0 
+v§a0s a0n 0 0 
+.model u3:iq d(ron=2k vfwd=2 epsilon=1 ilimit=.7m noiseless)
+.model u3:45ma d(ron=10 vrev=0 ilimit=45m revilimit=45m)
+.model u3:20ohm d(ron=10 roff=30 epsilon=10m noiseless)
+.model u3:sd sw(ron=10m roff=143525927.680271 vt=-2.6 vh=-100m noiseless)
+.model u3:x2 d(ron=1m roff=2000000 vfwd=-6m epsilon=10m noiseless)
+.model u3:x1 d(ron=1m roff=2000000 vfwd=-3m epsilon=10m noiseless)
+.model u3:esd d(ron=10 roff=1t vfwd=0 epsilon=1 noiseless)
+.model u2:iq d(ron=2k vfwd=2 epsilon=1 ilimit=.7m noiseless)
+.model u2:45ma d(ron=10 vrev=0 ilimit=45m revilimit=45m)
+.model u2:20ohm d(ron=10 roff=30 epsilon=10m noiseless)
+.model u2:sd sw(ron=10m roff=143525927.680271 vt=-2.6 vh=-100m noiseless)
+.model u2:x2 d(ron=1m roff=2000000 vfwd=-6m epsilon=10m noiseless)
+.model u2:x1 d(ron=1m roff=2000000 vfwd=-3m epsilon=10m noiseless)
+.model u2:esd d(ron=10 roff=1t vfwd=0 epsilon=1 noiseless)
+.model u1:dclamp d(is=1e-15 ibv=1e-13)
+.model u1:ven vswitch(von=5 voff=0.8 ron=80000 roff=130000)
+.model u1:von vswitch(von=5 voff=0.8 ron=0.001 roff=1000000000000)
+.op
+.end
+
+Ignoring empty pin current: Ix(u1:1)
+Ignoring empty pin current: Ix(u1:2)
+Ignoring empty pin current: Ix(u1:16)
+.step a1=0 a0=0
+Early termination of direct N-R iteration.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+Gmin = 0.00100083
+vernier = 0.03125
+vernier = 0.015625
+vernier = 0.0078125
+vernier = 0.00390625
+vernier = 0.00195313
+Gmin = 0.00100083
+vernier = 0.000976563
+vernier = 0.000488281
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 93.9394%
+Source stepping succeeded in finding the operating point.
+
+Semiconductor Device Operating Points:
+                        --- Diodes ---
+Name:    d:u3:3      d:u3:2      d:u3:1      d:u3:6      d:u3:5
+Model:   u3:45ma    u3:20ohm      u3:iq       u3:x2       u3:x1
+Id:      5.41e-04   -5.41e-04    3.48e-04    2.23e+00   -1.65e-06
+Vd:      5.41e-03   -1.62e-02    3.30e+00    6.76e-04   -3.30e+00
+Req:     1.00e-01    3.33e-02    5.00e-04    1.00e+03    5.00e-07
+CAP:     0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+
+Name:    d:u3:22     d:u3:21     d:u2:3      d:u2:2      d:u2:1
+Model:   u3:esd      u3:esd      u2:45ma    u2:20ohm      u2:iq
+Id:     -3.30e-12    2.06e-08    5.58e-04   -5.58e-04    3.48e-04
+Vd:     -3.30e+00    6.43e-04    5.58e-03   -1.67e-02    3.30e+00
+Req:     1.00e-12    1.00e-01    1.00e-01    3.33e-02    5.00e-04
+CAP:     0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+
+Name:    d:u2:6      d:u2:5      d:u2:22     d:u2:21    d:u1:424
+Model:    u2:x2       u2:x1      u2:esd      u2:esd     u1:dclamp
+Id:     -8.14e-07   -8.36e-07   -1.67e-12   -1.63e-12   -1.65e-12
+Vd:     -1.63e+00   -1.67e+00   -1.67e+00   -1.63e+00   -1.65e+00
+Req:     5.00e-07    5.00e-07    1.00e-12    1.00e-12    1.00e+12
+CAP:     0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+
+Name:   d:u1:423    d:u1:324    d:u1:323    d:u1:224    d:u1:223
+Model:  u1:dclamp   u1:dclamp   u1:dclamp   u1:dclamp   u1:dclamp
+Id:     -1.65e-12   -1.65e-12   -1.65e-12   -1.65e-12   -1.65e-12
+Vd:     -1.65e+00   -1.65e+00   -1.65e+00   -1.65e+00   -1.65e+00
+Req:     1.00e+12    1.00e+12    1.00e+12    1.00e+12    1.00e+12
+CAP:     0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+
+Name:   d:u1:124    d:u1:123     d:u1:22     d:u1:21    d:u1:414
+Model:  u1:dclamp   u1:dclamp   u1:dclamp   u1:dclamp   u1:dclamp
+Id:     -3.27e-12   -2.96e-14   -3.28e-12   -2.15e-14   -1.65e-12
+Vd:     -3.27e+00   -2.89e-02   -3.28e+00   -2.10e-02   -1.65e+00
+Req:     1.00e+12    9.88e+11    1.00e+12    9.83e+11    1.00e+12
+CAP:     0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+
+Name:   d:u1:413    d:u1:314    d:u1:313    d:u1:214    d:u1:213
+Model:  u1:dclamp   u1:dclamp   u1:dclamp   u1:dclamp   u1:dclamp
+Id:     -1.65e-12   -1.65e-12   -1.65e-12   -1.65e-12   -1.65e-12
+Vd:     -1.65e+00   -1.65e+00   -1.65e+00   -1.65e+00   -1.65e+00
+Req:     1.00e+12    1.00e+12    1.00e+12    1.00e+12    1.00e+12
+CAP:     0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+
+Name:   d:u1:114    d:u1:113     d:u1:12     d:u1:11
+Model:  u1:dclamp   u1:dclamp   u1:dclamp   u1:dclamp
+Id:     -1.65e-12   -1.65e-12   -1.65e-12   -1.65e-12
+Vd:     -1.65e+00   -1.65e+00   -1.65e+00   -1.65e+00
+Req:     1.00e+12    1.00e+12    1.00e+12    1.00e+12
+CAP:     0.00e+00    0.00e+00    0.00e+00    0.00e+00
+
+
+.step a1=3.3 a0=0
+.step a1=0 a0=3.3
+.step a1=3.3 a0=3.3
+
+Date: Sat Mar 05 19:03:00 2022
+Total elapsed time: 214.164 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 5541
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 126
+fillins = 153
+solver = Normal
+Thread vector: 19.1/8.7[8] 0.0/0.0[0] 14.9/3.0[8] 0.5/1.9[1]  2592/500
+Matrix Compiler1: 17.50 KB object code size
+Matrix Compiler2: 13.88 KB object code size  2.9/4.8/[0.9]
+

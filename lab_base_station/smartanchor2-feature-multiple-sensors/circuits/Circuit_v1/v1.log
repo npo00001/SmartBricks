@@ -1,0 +1,153 @@
+
+   --- Expanded Deck Component Count ---
+A's 4
+B's 8
+C's 26
+D's 14
+G's 4
+I's 4
+L's 2
+R's 13
+S's 2
+V's 1
+tot: 78
+
+
+    --- Expanded Netlist ---
+* C:\Users\zacha\Desktop\MyFiles\Research Project\LTSpice\Circuit_v1\v1.asc
+r1a com n002 2k
+r1b com n001 2k
+r§pot n002 n004 501
+r n001 n004 500
+vdd com 0 3.3
+r3b 0 n005 1k
+r3a n005 com 1k
+r2 vout n001 750
+r3d 0 n003 1k
+r3c n003 com 1k
+c:u1:1 u1:n006 u1:x 1e-012 
+a:u1:1 u1:n005 0 u1:m u1:m u1:m u1:m u1:x u1:m ota g=1.2955822643008e-005 iout=4.12396643091325e-006 en=13n enk=20 vhigh=1e308 vlow=-1e308
+d:u1:21 u1:x com u1:esd 
+d:u1:22 0 u1:x u1:esd 
+d:u1:5 u1:n006 com u1:x1 
+d:u1:6 0 u1:n006 u1:x2 
+c:u1:2 com u1:n006 1p
+c:u1:3 u1:n006 0 1p
+g:u1:2 0 u1:m com 0 500µ
+r:u1:4 u1:m 0 1k noiseless
+g:u1:3 0 u1:m 0 0 500µ
+s:u1:1 u1:x u1:m 0 com u1:sd 
+a:u1:2 n002 n005 0 0 0 0 0 0 ota g=0 in=.8f ink=1 incm=.08f incmk=1
+i:u1:1 n005 0 2p load
+i:u1:2 n002 0 2p load
+c:u1:11 com n005 .7p rpar=40t noiseless
+c:u1:5 n005 0 .7p rpar=40t noiseless
+c:u1:10 n002 0 .7p rpar=40t noiseless
+c:u1:12 com n002 .7p rpar=40t noiseless
+b:u1:3 0 u1:n004 i=2m*dnlim(uplim(v(n005),v(com)-1,.1), v(0)+-.2, .1)+100n*v(n005)
+b:u1:4 u1:n004 0 i=2m*dnlim(uplim(v(n002),v(com)-1,.1), v(0)+-.2, .1)+100n*v(n002)
+c:u1:4 u1:n004 0 35p rpar=1k noiseless
+d:u1:1 com 0 u1:iq 
+l:u1:1 u1:n004 u1:n005 35µ
+c:u1:6 u1:n005 0 35p rpar=1k noiseless
+c:u1:7 com n004 1p
+c:u1:8 n004 0 1p
+r:u1:5 n002 n005 13.35t noiseless
+b:u1:1 com u1:n006 i=if(v(u1:m,u1:x)>=0,v(u1:m,u1:x)*(0.0161656666666667 + 0.808283333333333 *v(u1:m,u1:x)),0)
+b:u1:2 u1:n006 0 i=if(v(u1:x,u1:m)>0,v(u1:x,u1:m)*(0.0161656666666667 + 0.808283333333333 *v(u1:x,u1:m)),0)
+d:u1:2 u1:n006 u1:n007 u1:20ohm 
+d:u1:3 n004 u1:n007 u1:45ma 
+c:u1:9 com u1:n007 1p
+c:u1:13 u1:n007 0 1p
+c:u2:1 u2:n006 u2:x 1e-012 
+a:u2:1 u2:n005 0 u2:m u2:m u2:m u2:m u2:x u2:m ota g=1.2955822643008e-005 iout=4.12396643091325e-006 en=13n enk=20 vhigh=1e308 vlow=-1e308
+d:u2:21 u2:x com u2:esd 
+d:u2:22 0 u2:x u2:esd 
+d:u2:5 u2:n006 com u2:x1 
+d:u2:6 0 u2:n006 u2:x2 
+c:u2:2 com u2:n006 1p
+c:u2:3 u2:n006 0 1p
+g:u2:2 0 u2:m com 0 500µ
+r:u2:4 u2:m 0 1k noiseless
+g:u2:3 0 u2:m 0 0 500µ
+s:u2:1 u2:x u2:m 0 com u2:sd 
+a:u2:2 n001 n003 0 0 0 0 0 0 ota g=0 in=.8f ink=1 incm=.08f incmk=1
+i:u2:1 n003 0 2p load
+i:u2:2 n001 0 2p load
+c:u2:11 com n003 .7p rpar=40t noiseless
+c:u2:5 n003 0 .7p rpar=40t noiseless
+c:u2:10 n001 0 .7p rpar=40t noiseless
+c:u2:12 com n001 .7p rpar=40t noiseless
+b:u2:3 0 u2:n004 i=2m*dnlim(uplim(v(n003),v(com)-1,.1), v(0)+-.2, .1)+100n*v(n003)
+b:u2:4 u2:n004 0 i=2m*dnlim(uplim(v(n001),v(com)-1,.1), v(0)+-.2, .1)+100n*v(n001)
+c:u2:4 u2:n004 0 35p rpar=1k noiseless
+d:u2:1 com 0 u2:iq 
+l:u2:1 u2:n004 u2:n005 35µ
+c:u2:6 u2:n005 0 35p rpar=1k noiseless
+c:u2:7 com vout 1p
+c:u2:8 vout 0 1p
+r:u2:5 n001 n003 13.35t noiseless
+b:u2:1 com u2:n006 i=if(v(u2:m,u2:x)>=0,v(u2:m,u2:x)*(0.0161656666666667 + 0.808283333333333 *v(u2:m,u2:x)),0)
+b:u2:2 u2:n006 0 i=if(v(u2:x,u2:m)>0,v(u2:x,u2:m)*(0.0161656666666667 + 0.808283333333333 *v(u2:x,u2:m)),0)
+d:u2:2 u2:n006 u2:n007 u2:20ohm 
+d:u2:3 vout u2:n007 u2:45ma 
+c:u2:9 com u2:n007 1p
+c:u2:13 u2:n007 0 1p
+.model u2:iq d(ron=2k vfwd=2 epsilon=1 ilimit=.7m noiseless)
+.model u2:45ma d(ron=10 vrev=0 ilimit=45m revilimit=45m)
+.model u2:20ohm d(ron=10 roff=30 epsilon=10m noiseless)
+.model u2:sd sw(ron=10m roff=143525927.680271 vt=-2.6 vh=-100m noiseless)
+.model u2:x2 d(ron=1m roff=2000000 vfwd=-6m epsilon=10m noiseless)
+.model u2:x1 d(ron=1m roff=2000000 vfwd=-3m epsilon=10m noiseless)
+.model u2:esd d(ron=10 roff=1t vfwd=0 epsilon=1 noiseless)
+.model u1:iq d(ron=2k vfwd=2 epsilon=1 ilimit=.7m noiseless)
+.model u1:45ma d(ron=10 vrev=0 ilimit=45m revilimit=45m)
+.model u1:20ohm d(ron=10 roff=30 epsilon=10m noiseless)
+.model u1:sd sw(ron=10m roff=143525927.680271 vt=-2.6 vh=-100m noiseless)
+.model u1:x2 d(ron=1m roff=2000000 vfwd=-6m epsilon=10m noiseless)
+.model u1:x1 d(ron=1m roff=2000000 vfwd=-3m epsilon=10m noiseless)
+.model u1:esd d(ron=10 roff=1t vfwd=0 epsilon=1 noiseless)
+.op
+.end
+
+Direct Newton iteration for .op point succeeded.
+Semiconductor Device Operating Points:
+                        --- Diodes ---
+Name:    d:u2:3      d:u2:2      d:u2:1      d:u2:6      d:u2:5
+Model:   u2:45ma    u2:20ohm      u2:iq       u2:x2       u2:x1
+Id:     -1.60e-06    1.60e-06    3.48e-04   -8.26e-07   -8.24e-07
+Vd:     -1.60e-05    4.78e-05    3.30e+00   -1.65e+00   -1.65e+00
+Req:     1.00e-01    1.00e-01    5.00e-04    5.00e-07    5.00e-07
+CAP:     0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+
+Name:    d:u2:22     d:u2:21     d:u1:3      d:u1:2      d:u1:1
+Model:   u2:esd      u2:esd      u1:45ma    u1:20ohm      u1:iq
+Id:     -1.65e-12   -1.65e-12    1.65e-03   -1.65e-03    3.48e-04
+Vd:     -1.65e+00   -1.65e+00    1.65e-02   -4.95e-02    3.30e+00
+Req:     1.00e-12    1.00e-12    1.00e-01    3.33e-02    5.00e-04
+CAP:     0.00e+00    0.00e+00    0.00e+00    0.00e+00    0.00e+00
+
+Name:    d:u1:6      d:u1:5      d:u1:22     d:u1:21
+Model:    u1:x2       u1:x1      u1:esd      u1:esd
+Id:     -5.85e-07   -1.06e-06   -1.69e-12   -1.62e-12
+Vd:     -1.17e+00   -2.13e+00   -1.69e+00   -1.61e+00
+Req:     5.00e-07    5.00e-07    1.00e-12    1.00e-12
+CAP:     0.00e+00    0.00e+00    0.00e+00    0.00e+00
+
+
+
+Date: Fri Mar 04 14:55:18 2022
+Total elapsed time: 0.125 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 7
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 20
+fillins = 17
+solver = Normal
+
