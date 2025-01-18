@@ -1,0 +1,187 @@
+Green
+{
+    BaseStationReader
+    ReadResult
+    SerialReaderWriter
+    CSWriter
+    RealTimePlotter
+    Logger
+    LogLevel
+}
+
+
+main.py
+{
+    RealTimePlotter
+    BaseStationReader(SerialReaderWriter)
+    Logger
+
+    def write()
+        CSWriter
+
+    def cleanup()
+
+    if (ReadResult)
+        write()
+    else
+        LogLevel
+
+    except KeyboardInterrupt:
+        cleanup()
+}
+
+
+BaseStationReader.py
+ReadResult
+{
+
+}
+
+BaseStationReader
+{
+    def __init__(SerialReaderWriter):
+
+    def read():
+        ReadResult
+
+        if ()
+            if ()
+                ReadResult
+            
+            ReadResult
+
+        try:
+            if ()
+                read()
+
+                if ()
+                    ReadResult
+
+                if ()
+                    ReadResult
+                elif ()
+                    ReadResult
+                else
+                    ReadResult
+
+            else
+                if ()
+                    ReadResult
+
+                ReadResult
+
+        except SerialException:
+            ReadResult
+
+        except UnicodeDecodeError:
+            ReadResult
+
+    def close():
+}
+
+
+serialrw.py
+SerialReaderWriter
+{
+    def __init__():
+
+    def is_connected():
+
+    def find_port():
+
+    def connect():
+        if ()
+            find_port()
+
+    def disconnect():
+
+    def read():
+
+    def has_waiting():
+
+    def write():
+        write()
+}
+
+
+csvwriter.py
+{
+    def _get_file():
+}
+
+CSVWriter
+{
+    def __init__():
+        _get_file()
+
+    def close():
+        close()
+
+    def write():
+    
+    def set_file():
+        close()
+        _get_file()
+}
+
+
+realtimeplotter.py
+RealTimePlotter(Plotter)
+{
+    def __init__():
+        __init__()
+
+    def plot()
+        plot()
+}
+
+
+plotter.py
+Line
+{
+    def __init__():
+}
+
+Plotter
+{
+    def __init__():
+
+    def plot():
+        if ()
+            plot()
+            Line
+
+    def update():
+
+    def done():
+}
+
+
+logger.py
+LogLevel
+{
+
+}
+
+Logger
+{
+    def __init__(LogLevel, LogLevel):
+
+    def close():
+        close()
+
+    def log():
+    
+    def debug():
+        log(LogLevel)
+
+    def info():
+        log(LogLevel)
+
+    def warn():
+        log(LogLevel)
+
+    def error():
+        log(LogLevel)
+}
+
