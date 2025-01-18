@@ -40,6 +40,9 @@ p = RealTimePlotter(xstart=start_time, xrange=timedelta(hours=24), yrange=[0, 3.
                     title="Voltage vs. Time", xlabel="Time", ylabel="Voltage (V)", solid_lines=(V_LOW, V_HIGH),
                     x_minor_locator=HourLocator(interval=4), x_minor_formatter=DateFormatter("%I:%M %p"),
                     x_major_locator=DayLocator(interval=1), x_major_formatter=DateFormatter("\n%m-%d-%Y"))
+
+
+
 bsr = BaseStationReader(SerialReaderWriter("/dev/ttyACM0", 9600, timeout=360), DATA_PATTERN, timeout=timedelta(seconds=360))
 writers = {}
 logger = Logger(ERROR_LOG_NAME)
