@@ -1,8 +1,8 @@
 import enum
 from os import makedirs, path, fsync
-import logging
-from logging.handlers import RotatingFileHandler
-from datetime import datetime
+import logging # Not used in archived code
+from logging.handlers import RotatingFileHandler # Not used in archived code
+from datetime import datetime # Not used in archived code
 
 class LogLevel(enum.IntEnum):
     """Used to tell the Logger how to handle a message."""
@@ -20,6 +20,8 @@ class Logger:
         # Create log directory if it doesn't exist
         makedirs(path.dirname(file_path), exist_ok=True)
 
+        # self.file = open(file_path, "w") # This is the last line of the archived code under def __init__
+
         # Set up the logging
         self.logger = logging.getLogger("SmartLogger")
         self.logger.setLevel(logging.DEBUG)
@@ -36,7 +38,21 @@ class Logger:
         console_handler.setFormatter(console_formatter)
         self.logger.addHandler(console_handler)
 
+    # def close(self):
+        # self.file.close()
+
     def log(self, msg, log_level):
+        # prefix = "%-9s" % f"{log_level.name}:"
+        # text = f"{prefix} {msg}"
+
+        # if log_level >= self.print_level:
+        #     print(text)
+
+        # if log_level >= self.write_level:
+        #     self.file.write(text + "\n")
+
+        # self.file.flush()
+        # fsync(self.file.fileno())
         """Log a message with the appropriate severity."""
         if log_level >= self.print_level:
             if log_level == LogLevel.DEBUG:
