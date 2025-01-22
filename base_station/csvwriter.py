@@ -37,7 +37,7 @@ class CSVWriter:
         self.file.flush()  # Flush file buffer
         fsync(self.file.fileno())  # Ensure the data is written to disk
 
-        # Upload to S3 if S3 configuration is provided
+        # # Upload to S3 if S3 configuration is provided
         # if self.s3_client:
             # s3_key = f"{self.s3_key_prefix}/{self.file.name.split('/')[-1]}"
             # try:

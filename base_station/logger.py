@@ -53,6 +53,7 @@ class Logger:
 
         # self.file.flush()
         # fsync(self.file.fileno())
+        
         """Log a message with the appropriate severity."""
         if log_level >= self.print_level:
             if log_level == LogLevel.DEBUG:
