@@ -10,10 +10,10 @@ from datetime import datetime # as dt, timedelta
 # from matplotlib.dates import DateFormatter, HourLocator, DayLocator
 # import matplotlib.pyplot as plt # Ensure pyplot is imported
 
-# from basestationreader import BaseStationReader, ReadResult
+from basestationreader import BaseStationReader, ReadResult
 from csvwriter import CSVWriter
 from logger import Logger, LogLevel
-# from realtimeplotter import RealTimePlotter
+from realtimeplotter import RealTimePlotter
 from serialreaderwriter import SerialReaderWriter
 
 def establish_serial_connection(logger):
