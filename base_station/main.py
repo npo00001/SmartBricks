@@ -1,12 +1,22 @@
-from datetime import datetime
+from datetime import datetime # as dt, timedelta
+from datetime import timedelta
+# from math import floor
+# from statistics import mean
 from traceback import format_exc
+from re import compile
+# from collections import defaultdict
+
+# import matplotlib # Added import to use matplotlib backend
+# matplotlib.use('TkAgg') # Set the backend to TkAgg, which uses Tkinter
+
+# from matplotlib.dates import DateFormatter, HourLocator, DayLocator
+# import matplotlib.pyplot as plt # Ensure pyplot is imported
+
 from basestationreader import BaseStationReader, ReadResult
 from csvwriter import CSVWriter
 from logger import Logger, LogLevel
 from realtimeplotter import RealTimePlotter
 from serialreaderwriter import SerialReaderWriter
-from re import compile
-from datetime import timedelta
 
 def establish_serial_connection(logger):
     srw = SerialReaderWriter()
