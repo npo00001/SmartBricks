@@ -1,0 +1,7 @@
+2025-04-08 12:41:52,226 - INFO - 04-08-2025 12:41:50 PM | Listening for BaseStation...
+2025-04-08 12:41:52,278 - INFO - 04-08-2025 12:41:52 PM | BaseStation connected.
+2025-04-08 12:41:53,111 - CRITICAL - 04-08-2025 12:41:53 PM | Received 'Feather LoRa RX Test!'.
+2025-04-08 12:41:53,703 - CRITICAL - 04-08-2025 12:41:53 PM | Received 'LoRa radio init OK!'.
+2025-04-08 12:41:54,190 - CRITICAL - 04-08-2025 12:41:54 PM | Received 'Set Freq to: 915.00'.
+2025-04-08 12:42:09,983 - CRITICAL - 04-08-2025 12:42:09 PM | Trapped CTRL+C -- Closing Program
+2025-04-08 12:42:09,984 - INFO - The program has ended. Press ENTER to close the window.

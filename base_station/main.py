@@ -52,7 +52,8 @@ def write(sensor, data):
     """Write data to the CSV file associated with the given sensor.
     Make a new CSVWriter, with header, if one does not already exist."""
     if sensor not in writers:
-        writers[sensor] = CSVWriter(DATA_LOG_NAME.format(sensor=sensor, i=file_count), s3_bucket='smartbricksbucket', s3_key_prefix="")
+        # writers[sensor] = CSVWriter(DATA_LOG_NAME.format(sensor=sensor, i=file_count), s3_bucket='smartbricksbucket', s3_key_prefix="")
+        writers[sensor] = CSVWriter(DATA_LOG_NAME.format(sensor=sensor, i=file_count))
         writers[sensor].write(DATA_LOG_HEADER)  # start new CSVWriters with the header
 
     writers[sensor].write(data)
