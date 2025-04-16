@@ -11,7 +11,9 @@ import os
 BAUD_RATE = 9600
 MAX_POINTS = 20  # Max number of points to show on the graph at a time (panning)
 EXPECTED_SENSORS = [f"Sensor {i}" for i in range(1, 6)]
-DATA_FOLDER = "data_logs"  # Folder for storing CSV files
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_FOLDER = os.path.join(SCRIPT_DIR, "..", "data_logs")
+DATA_FOLDER = os.path.abspath(DATA_FOLDER)
 
 # === FIND SERIAL PORT AUTOMATICALLY ===
 def find_serial_port():
@@ -122,7 +124,7 @@ def update(frame):
 
 # === PLOT SETUP ===
 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 6))
-plt.tight_layout()
+plt.tight_layout(h_pad=3.3)
 ani = FuncAnimation(fig, update, interval=1000)
 
 plt.show()
