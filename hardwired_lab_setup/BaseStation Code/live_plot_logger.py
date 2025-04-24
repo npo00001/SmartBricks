@@ -30,7 +30,7 @@ def convert_voltage_to_temperature(voltage):
 def find_serial_port():
     ports = list(serial.tools.list_ports.comports())
     for port in ports:
-        if "USB" in port.description:
+        if "USB" in port.device or "ttyUSB" in port.device or "ttyACM" in port.device:
             return port.device
     raise Exception("No suitable serial port found")
 
