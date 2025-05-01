@@ -28,16 +28,11 @@ A Python script running on the computer:
 ## Folder Structure
 
 . 
-├── BaseStation Code                               # Python script for logging and plotting 
-│     ├── live_plot_logger.py 
-│     └── data_logs                                # Auto-created folder for CSV output 
-├── Sensor Code # Arduino code for I2C slave nodes 
-│     ├── thermistor_node.ino                      # For Sensors 1 & 2 
-│     └── voltage_node.ino                         # For Sensors 3–5 
-├── Hub Code # Arduino code for I2C master 
-│     └── hub_master.ino 
-├── wiring_diagram.png                             # (Optional, add if available) 
-└── README.md                                      # You're here!
+├── BaseStation Code          # Python script for logging and plotting 
+├── Sensor Code               # Arduino code for I2C slave nodes 
+├── Hub Code                  # Arduino code for I2C master 
+├── wiring_diagram.png        # (Optional, add if available) 
+└── README.md                 # You're here!
 
 ## Sensor Map
 
